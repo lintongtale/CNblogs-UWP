@@ -1,0 +1,36 @@
+﻿<ContentDialog
+    x:Class="博客园UWP.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:博客园UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="登录博客园"
+    PrimaryButtonText="登录"
+    SecondaryButtonText="取消"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick"
+    FullSizeDesired="False"
+    MaxWidth="400"
+    >
+
+    <Grid >
+        <StackPanel Orientation="Vertical" Margin="0 15 0 5">
+            <TextBox x:Name="UserInputTextBox"
+                     BorderThickness="1"
+                     PlaceholderText="请输入用户名"
+                     FontFamily="微软雅黑" FontSize="18" />
+            <PasswordBox x:Name="PasswordInptutBox" 
+                         BorderThickness="1"
+                         PlaceholderText="请输入密码"
+                         FontFamily="微软雅黑"
+                         FontSize="18"
+                         Margin="0 5 0 0"
+                         />
+            <WebView x:Name="LoginWebView" 
+                     LoadCompleted="LoginWebView_LoadCompleted"
+                     Visibility="Collapsed"/>
+        </StackPanel>
+    </Grid>
+</ContentDialog>
